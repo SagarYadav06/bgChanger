@@ -33,14 +33,6 @@ const Button = ({ changeBg }) => {
       >
         Yellow
       </button>
-
-      <button
-        onClick={() => changeBg("black")}
-        className="px-4 py-2 rounded-lg bg-black text-white hover:scale-105 transition"
-      >
-        Dark
-      </button>
-
     </div>
   );
 };
