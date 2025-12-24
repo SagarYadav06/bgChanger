@@ -1,40 +1,46 @@
-import React from "react";
+import React, { useState } from 'react'
 
-const Button = ({ changeBg }) => {
+function  App ()  {
+  const [color, setColor] =useState("olive")
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 
-                    bg-white shadow-lg rounded-xl px-4 py-3 
-                    flex gap-3">
-      
-      <button
-        onClick={() => changeBg("red")}
-        className="px-4 py-2 rounded-lg bg-red-500 text-white hover:scale-105 transition"
-      >
-        Red
-      </button>
+  <div className="w-full h-screen duration-200"
+  style={{backgroundColor: color}}
+  >
+   
+   <div className="fixted flex flex-wrap justify-center
+   bottom-12 inset-x-0 px-2">
+    <div className="flex flex-wrap justiy-center
+    gap-3 shadow-lg bg-white px-3 py-2
+    rounded-2xl">
+      <button 
+      onClick={() => setColor("red")}
+      className="outline-none px-4 py-1 
+      rounded-full text-white shadow-lg"
+      style={{background: "red"}}
+      >Red</button>
 
-      <button
-        onClick={() => changeBg("green")}
-        className="px-4 py-2 rounded-lg bg-green-500 text-white hover:scale-105 transition"
-      >
-        Green
-      </button>
+      <button 
+      onClick={() => setColor("green")}
+      className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+      style={{background: "green"}}
+      >Green</button>
 
-      <button
-        onClick={() => changeBg("blue")}
-        className="px-4 py-2 rounded-lg bg-blue-500 text-white hover:scale-105 transition"
-      >
-        Blue
-      </button>
+      <button 
+       onClick={() => setColor("blue")}
+      className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+      style={{background: "blue"}}
+      >blue</button>
 
-      <button
-        onClick={() => changeBg("yellow")}
-        className="px-4 py-2 rounded-lg bg-yellow-400 text-black hover:scale-105 transition"
-      >
-        Yellow
-      </button>
+      <button 
+       onClick={() => setColor("orange")}
+      className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+      style={{background: "orange"}} 
+      >orange</button>
+    
     </div>
-  );
-};
+   </div>
+  </div>
+  )
+}
 
-export default Button;
+export default App
